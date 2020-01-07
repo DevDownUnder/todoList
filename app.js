@@ -1,3 +1,5 @@
+
+//OBJECT
 //Create object for Todo List
 let todoList = {
   //INITIAL LIST
@@ -19,7 +21,7 @@ let todoList = {
     console.log('My Todos:', this.todos)
   },
 
-    //CHANGE A LIST ITEM
+  //CHANGE A LIST ITEM
   //Create method (function within an object) to change list items
   changeTodo: function (position, newValue) {
     this.todos[position] = newValue
@@ -27,7 +29,7 @@ let todoList = {
     console.log('My Todos:', this.todos)
   },
 
-      //DELETE A LIST ITEM
+  //DELETE A LIST ITEM
   //Create method (function within an object) to delete list items
   deleteTodo: function (position) {
     this.todos.splice(position)
@@ -48,8 +50,7 @@ let todoList = {
 todoList.addTodo("item 4")
 
 //CHANGE A LIST ITEM METHOD
-todoList.changeTodo( 3 ,"item 5")
- 
+todoList.changeTodo(3, "item 5")
 
 //DELETE A LIST ITEM METHOD
 todoList.deleteTodo(3)
