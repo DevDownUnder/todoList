@@ -8,7 +8,7 @@ let todoList = {
   //Create method (function within an object) to display the list items
   displayTodo: function () {
     //this. refers to the object (todoList) and todos is the property
-    console.log(this.todos)
+    console.log('My Todos:', this.todos)
   },
 
   //ADD TO LIST
@@ -16,15 +16,28 @@ let todoList = {
   addTodo: function (item) {
     this.todos.push(item)
     //this. refers to the object (todoList) and todos is the property
-    console.log(this.todos)
+    console.log('My Todos:', this.todos)
+  },
+
+    //CHANGE A LIST ITEM
+  //Create method (function within an object) to change list items
+  changeTodo: function (position, newValue) {
+    this.todos[position] = newValue
+    //this. refers to the object (todoList) and todos is the property
+    console.log('My Todos:', this.todos)
   }
+
 };
 
 //RUN METHODS (FUNCTIONS)
 
 //DISPLAY METHOD
-todoList.displayTodo()
+//todoList.displayTodo()
 
 
 //ADD TO LIST METHOD
 todoList.addTodo("item 4")
+
+//CHANGE A LIST ITEM METHOD
+todoList.changeTodo([3] ,"item 5")
+ 
