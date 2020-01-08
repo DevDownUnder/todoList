@@ -14,12 +14,24 @@ let todoList = {
   },
 
   //ADD TO LIST
+  //SINGLE ADDITION
   //Create method (function within an object) to add to the list items
   addTodo: function (item) {
     this.todos.push(item)
     //this. refers to the object (todoList) and todos is the property
     console.log('My Todos:', this.todos)
   },
+
+  //ADD OBJECT AND BOOLEAN
+  addTodo: function (todoText) {
+    this.todos.push({
+      todoText: todoText,
+      completed: false
+    })
+    console.log('My Todos:', this.todos)
+  },
+
+
 
   //CHANGE A LIST ITEM
   //Create method (function within an object) to change list items
@@ -41,13 +53,17 @@ let todoList = {
 //RUN METHODS (FUNCTIONS)
 
 //DISPLAY METHOD
-todoList.displayTodo()
+//todoList.displayTodo()
 
 //ADD TO LIST METHOD
-todoList.addTodo("item 4")
+//SINGULAR
+//todoList.addTodo("item 4")
+
+//ADD OBJECT AND BOOLEAN
+todoList.addTodo("hello")
 
 //CHANGE A LIST ITEM METHOD
-todoList.changeTodo(3, "item 5")
+//todoList.changeTodo(3, "item 5")
 
 //DELETE A LIST ITEM METHOD
-todoList.deleteTodo(3)
+//todoList.deleteTodo(3)
