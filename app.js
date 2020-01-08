@@ -4,7 +4,11 @@
 let todoList = {
   //INITIAL LIST
   //Create array (list) variable within object for possible items
-  todos: ["item 1", "item 2", "item 3"],
+  //todos: ["item 1", "item 2", "item 3"],
+
+  //BLANK LIST
+  todos: [],
+
 
   //DISPLAY LIST
   //Create method (function within an object) to display the list items
@@ -44,9 +48,14 @@ let todoList = {
   //CHANGE OBJECT AND BOOLEAN
   changeTodo: function (position, todoText) {
     this.todos[position].todoText = todoText
-    console.log('My Todos:', this.todos)
   },
 
+  //TOGGLE COMPLETED LIST ITEM 
+  toggleTodo: function (position) {
+    var todo = this.todos[position];
+    this.todos.completed = !this.todos.completed;
+    this.displayTodo()
+  },
 
   //DELETE A LIST ITEM
   //Create method (function within an object) to delete list items
@@ -67,14 +76,16 @@ let todoList = {
 //todoList.addTodo("item 4")
 
 //ADD OBJECT AND BOOLEAN
-todoList.addTodo("New Todo")
+todoList.addTodo("New Todo" , "Newest Todo")
 
 //CHANGE A LIST ITEM METHOD
 //SINGULAR
 //todoList.changeTodo(3, "item 5")
 
 //CHANGE OBJECT AND BOOLEAN
-todoList.changeTodo(3, "Newer Todo")
+todoList.changeTodo(0, "Newer Todo")
+todoList.toggleTodo(1)
+
 
 //DELETE A LIST ITEM METHOD
 //todoList.deleteTodo(3)
