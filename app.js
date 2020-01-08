@@ -36,15 +36,12 @@ let todoList = {
     //this. refers to the object (todoList) and todos is the property
     console.log('My Todos:', this.todos)
   }
-
-
 };
 
 //RUN METHODS (FUNCTIONS)
 
 //DISPLAY METHOD
-//todoList.displayTodo()
-
+todoList.displayTodo()
 
 //ADD TO LIST METHOD
 todoList.addTodo("item 4")
