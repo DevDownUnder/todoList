@@ -41,6 +41,13 @@ let todoList = {
     console.log('My Todos:', this.todos)
   },
 
+
+  //CHANGE OBJECT AND BOOLEAN
+  changeTodo: function (position, todoText) {
+    this.todos[position].todoText = todoText
+  },
+
+
   //DELETE A LIST ITEM
   //Create method (function within an object) to delete list items
   deleteTodo: function (position) {
@@ -60,10 +67,14 @@ let todoList = {
 //todoList.addTodo("item 4")
 
 //ADD OBJECT AND BOOLEAN
-todoList.addTodo("hello")
+todoList.addTodo("New Todo")
 
 //CHANGE A LIST ITEM METHOD
+//SINGULAR
 //todoList.changeTodo(3, "item 5")
+
+//CHANGE OBJECT AND BOOLEAN
+todoList.changeTodo(3, "Newer Todo")
 
 //DELETE A LIST ITEM METHOD
 //todoList.deleteTodo(3)
