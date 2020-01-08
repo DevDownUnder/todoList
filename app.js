@@ -32,7 +32,6 @@ let todoList = {
   },
 
 
-
   //CHANGE A LIST ITEM
   //Create method (function within an object) to change list items
   changeTodo: function (position, newValue) {
@@ -45,6 +44,7 @@ let todoList = {
   //CHANGE OBJECT AND BOOLEAN
   changeTodo: function (position, todoText) {
     this.todos[position].todoText = todoText
+    console.log('My Todos:', this.todos)
   },
 
 
