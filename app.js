@@ -1,14 +1,16 @@
 
 //OBJECT
-//Create object for Todo List
+//Create todoList Object
 let todoList = {
-  //INITIAL LIST
+
+  //FILLED LIST
   //Create array (list) variable within object for possible items
   //todos: ["item 1", "item 2", "item 3"],
 
   //BLANK LIST
   todos: [],
 
+  //METHODS
 
   //DISPLAY LIST
   //Create method (function within an object) to display the list items
@@ -76,7 +78,7 @@ let todoList = {
 //todoList.addTodo("item 4")
 
 //ADD OBJECT AND BOOLEAN
-todoList.addTodo("New Todo" , "Newest Todo")
+todoList.addTodo("New Todo", "Newest Todo")
 
 //CHANGE A LIST ITEM METHOD
 //SINGULAR
