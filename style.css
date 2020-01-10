@@ -1,3 +1,14 @@
+body{
+  margin: 3vh 0;
+}
+
+.banner{
+  margin: 0;
+  padding: 2rem;
+  background-color: rgb(240, 214, 240);
+}
+
+
 h1{
   margin: 20vh auto;
   font-size: 10vh;
