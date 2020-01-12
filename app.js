@@ -55,8 +55,9 @@ let todoList = {
   //TOGGLE COMPLETED LIST ITEM 
   //Create method (function within an object) to delete list items
   toggleTodo: function (position) {
-    //Variable is created to 
+    //Variable is created for reference in the next line 
     var todo = this.todos[position];
+    //Toggle the completion to the opposite of what it is currently
     todo.completed = !todo.completed;
     this.displayTodo()
   },
