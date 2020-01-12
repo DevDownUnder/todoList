@@ -53,9 +53,11 @@ let todoList = {
   },
 
   //TOGGLE COMPLETED LIST ITEM 
+  //Create method (function within an object) to delete list items
   toggleTodo: function (position) {
+    //Variable is created to 
     var todo = this.todos[position];
-    this.todos.completed = !this.todos.completed;
+    todo.completed = !todo.completed;
     this.displayTodo()
   },
 
@@ -86,8 +88,9 @@ todoList.addTodo("New Todo", "Newest Todo")
 
 //CHANGE OBJECT AND BOOLEAN
 todoList.changeTodo(0, "Newer Todo")
-todoList.toggleTodo(1)
 
+//TOGGLE COMPLETION OF AN ITEM
+todoList.toggleTodo(0)
 
 //DELETE A LIST ITEM METHOD
 //todoList.deleteTodo(3)
