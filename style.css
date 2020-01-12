@@ -2,16 +2,22 @@ body{
   margin: 3vh 0;
 }
 
+.banner-outline{
+  margin: 0;
+  padding: 0.2rem 0;
+  background-color: rgb(212, 19, 212);
+}
+
 .banner{
   margin: 0;
-  padding: 2rem;
+  padding: 4rem;
   background-color: rgb(240, 214, 240);
 }
 
 
 h1{
-  margin: 20vh auto;
-  font-size: 10vh;
+  margin: 10vh auto;
+  font-size: 5rem;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
