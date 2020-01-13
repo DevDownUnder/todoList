@@ -13,15 +13,14 @@ let todoList = {
 
   //DISPLAY LIST
   displayTodo: function () {
-    //if list is empty 
+    //if list is empty - "This list is empty!"
     if (this.todos.length === 0) {
       console.log("This list is empty!")
     }
     //else list is populated 
     else {
-      //For Loop to count list length (.length) and display text(.todoText) - see next else condition with ( ) included
+      //For Loop to count list (this.todos) length (.length) and display text(.todoText) see next conditionals (if/else)
       for (var i = 0; i < this.todos.length; i++) {
-
         //if list is empty add a (x) next to it
         if (this.todos[i].completed === true) {
           console.log('(x)', this.todos[i].todoText);
