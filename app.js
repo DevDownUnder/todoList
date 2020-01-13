@@ -19,7 +19,7 @@ let todoList = {
     }
     //else list is populated 
     else {
-      //For Loop to count list (this.todos) length (.length) and display text(.todoText) see next conditionals (if/else)
+      //For Loop takes current list (this.todos), calculates length (.length) and displays list items in text form(.todoText)
       for (var i = 0; i < this.todos.length; i++) {
         //if list is empty add a (x) next to it
         if (this.todos[i].completed === true) {
