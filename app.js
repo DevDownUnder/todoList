@@ -3,28 +3,27 @@
 //Create todoList Object
 let todoList = {
 
-  //POPULATED LIST
-  //Create array (list) variable within object for possible items
+  //POPULATED LIST (Array)
   //todos: ["item 1", "item 2", "item 3"],
 
-  //EMPTY LIST
+  //EMPTY LIST (to be filled dynamically)
   todos: [],
 
   //METHODS (FUNCTION WITHIN AN OBJECT)
 
   //DISPLAY LIST
-  //Create method (function within an object) to display the list items
   displayTodo: function () {
-    //if list is empty this will be displayed
-    if(this.todos.length === 0){
+    //if list is empty 
+    if (this.todos.length === 0) {
       console.log("This list is empty!")
     }
-    //else list is populated the list text will be displayed
-    else{
-    //For Loop to count list length (.length) and display text (.todoText)
-    for(var i=0; i < this.todos.length; i++){
-      console.log(this.todos[i].todoText);
-    }}
+    //else list is populated 
+    else {
+      //For Loop to count list length (.length) and display text (.todoText)
+      for (var i = 0; i < this.todos.length; i++) {
+        console.log(this.todos[i].todoText);
+      }
+    }
   },
 
   //ADD TO LIST
@@ -51,7 +50,7 @@ let todoList = {
   },
 
 
-  //CHANGE OBJECT (See Add Object for reference)
+  //CHANGE OBJECT (See Add Object for reference to todoText)
   changeTodo: function (position, todoText) {
     this.todos[position].todoText = todoText
   },
@@ -72,28 +71,19 @@ let todoList = {
   }
 };
 
-//RUN METHODS (FUNCTIONS)
+//TO EXECUTE METHODS (FUNCTIONS)
 
-//DISPLAY METHOD
+//DISPLAY 
 //todoList.displayTodo()
 
-//ADD TO LIST METHOD
-//SINGULAR
-//todoList.addTodo("item 4")
+//ADD TO LIST 
+//todoList.addTodo("New item")
 
-//ADD OBJECT AND BOOLEAN
-//todoList.addTodo("New Todo")
-
-
-//CHANGE A LIST ITEM METHOD
-//SINGULAR
-//todoList.changeTodo(3, "item 5")
-
-//CHANGE OBJECT AND BOOLEAN
-//todoList.changeTodo(0, "Newer Todo")
+//CHANGE A LIST ITEM 
+//todoList.changeTodo(item position, "New item")
 
 //TOGGLE COMPLETION OF AN ITEM
-//todoList.toggleTodo(0)
+//todoList.toggleTodo(item position)
 
-//DELETE A LIST ITEM METHOD
-//todoList.deleteTodo(3)
+//DELETE A LIST ITEM 
+//todoList.deleteTodo(item position)
