@@ -17,7 +17,7 @@ let todoList = {
   displayTodo: function () {
     //this. refers to the object (todoList) and todos is the property
     console.log('My Todos:', this.todos);
-    //For Loop to count list length and display text
+    //For Loop to count list length (.length) and display text (.todoText)
     for(var i=0; i < this.todos.length; i++){
       console.log(this.todos[i].todoText);
     }
