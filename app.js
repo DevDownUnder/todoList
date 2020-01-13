@@ -15,12 +15,16 @@ let todoList = {
   //DISPLAY LIST
   //Create method (function within an object) to display the list items
   displayTodo: function () {
-    //this. refers to the object (todoList) and todos is the property
-    console.log('My Todos:', this.todos);
+    //if list is empty this will be displayed
+    if(this.todos.length === 0){
+      console.log("This list is empty!")
+    }
+    //else list is populated the list text will be displayed
+    else{
     //For Loop to count list length (.length) and display text (.todoText)
     for(var i=0; i < this.todos.length; i++){
       console.log(this.todos[i].todoText);
-    }
+    }}
   },
 
   //ADD TO LIST
