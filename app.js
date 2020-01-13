@@ -30,7 +30,7 @@ let todoList = {
     console.log('My Todos:', this.todos)
   },
 
-  //ADD OBJECT (list item) AND BOOLEAN (item complete?)
+  //ADD OBJECT (list item) AND BOOLEAN (Option to complete - see Toggle)
   addTodo: function (todoText) {
     this.todos.push({
       todoText: todoText,
@@ -47,16 +47,16 @@ let todoList = {
   },
 
 
-  //CHANGE OBJECT AND BOOLEAN
+  //CHANGE OBJECT (See Add Object for reference)
   changeTodo: function (position, todoText) {
     this.todos[position].todoText = todoText
   },
 
-  //TOGGLE COMPLETED LIST ITEM 
+  //TOGGLE LIST ITEM (Item Completed)
   toggleTodo: function (position) {
     //Variable is created for reference in the next line 
     var todo = this.todos[position];
-    //Toggle to the opposite of what it is currently using ! Bang operator
+    //Toggle using ! bang operator
     todo.completed = !todo.completed;
     this.displayTodo()
   },
