@@ -3,28 +3,30 @@
 //Create todoList Object
 let todoList = {
 
-  //FILLED LIST
+  //POPULATED LIST
   //Create array (list) variable within object for possible items
   //todos: ["item 1", "item 2", "item 3"],
 
-  //BLANK LIST
+  //EMPTY LIST
   todos: [],
 
-  //METHODS
+  //METHODS (FUNCTION WITHIN AN OBJECT)
 
   //DISPLAY LIST
   //Create method (function within an object) to display the list items
   displayTodo: function () {
     //this. refers to the object (todoList) and todos is the property
-    console.log('My Todos:', this.todos)
+    console.log('My Todos:', this.todos);
+    //For Loop to count list length and display text
+    for(var i=0; i < this.todos.length; i++){
+      console.log(this.todos[i].todoText);
+    }
   },
 
   //ADD TO LIST
-  //SINGLE ADDITION
-  //Create method (function within an object) to add to the list items
+  //SINGLE ITEM
   addTodo: function (item) {
     this.todos.push(item)
-    //this. refers to the object (todoList) and todos is the property
     console.log('My Todos:', this.todos)
   },
 
@@ -39,10 +41,8 @@ let todoList = {
 
 
   //CHANGE A LIST ITEM
-  //Create method (function within an object) to change list items
   changeTodo: function (position, newValue) {
     this.todos[position] = newValue
-    //this. refers to the object (todoList) and todos is the property
     console.log('My Todos:', this.todos)
   },
 
@@ -53,20 +53,17 @@ let todoList = {
   },
 
   //TOGGLE COMPLETED LIST ITEM 
-  //Create method (function within an object) to delete list items
   toggleTodo: function (position) {
     //Variable is created for reference in the next line 
     var todo = this.todos[position];
-    //Toggle the completion to the opposite of what it is currently
+    //Toggle to the opposite of what it is currently using ! Bang operator
     todo.completed = !todo.completed;
     this.displayTodo()
   },
 
   //DELETE A LIST ITEM
-  //Create method (function within an object) to delete list items
   deleteTodo: function (position) {
     this.todos.splice(position)
-    //this. refers to the object (todoList) and todos is the property
     console.log('My Todos:', this.todos)
   }
 };
@@ -81,17 +78,18 @@ let todoList = {
 //todoList.addTodo("item 4")
 
 //ADD OBJECT AND BOOLEAN
-todoList.addTodo("New Todo", "Newest Todo")
+//todoList.addTodo("New Todo")
+
 
 //CHANGE A LIST ITEM METHOD
 //SINGULAR
 //todoList.changeTodo(3, "item 5")
 
 //CHANGE OBJECT AND BOOLEAN
-todoList.changeTodo(0, "Newer Todo")
+//todoList.changeTodo(0, "Newer Todo")
 
 //TOGGLE COMPLETION OF AN ITEM
-todoList.toggleTodo(0)
+//todoList.toggleTodo(0)
 
 //DELETE A LIST ITEM METHOD
 //todoList.deleteTodo(3)
