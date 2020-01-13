@@ -1,5 +1,5 @@
 
-//OBJECT
+//OBJECT - TODOLIST
 //Create todoList Object
 let todoList = {
 
@@ -30,7 +30,7 @@ let todoList = {
     console.log('My Todos:', this.todos)
   },
 
-  //ADD OBJECT AND BOOLEAN
+  //ADD OBJECT (list item) AND BOOLEAN (item complete?)
   addTodo: function (todoText) {
     this.todos.push({
       todoText: todoText,
