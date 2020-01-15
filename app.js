@@ -21,7 +21,7 @@ let todoList = {
     else {
       //For Loop takes current list (this.todos), calculates length (.length) and displays list items in text form(.todoText)
       for (var i = 0; i < this.todos.length; i++) {
-        //if list is empty add a (x) next to it
+        //if list item is completed add a (x) next to it
         if (this.todos[i].completed === true) {
           console.log('(x)', this.todos[i].todoText);
         }
@@ -33,62 +33,72 @@ let todoList = {
     }
   },
 
-    //ADD TO LIST
-    //SINGLE ITEM
-    addTodo: function (item) {
-      this.todos.push(item)
-      console.log('My Todos:', this.todos)
-    },
+  //ADD TO LIST
+  //SINGLE ITEM
+  addTodo: function (item) {
+    this.todos.push(item)
+    console.log('My Todos:', this.todos)
+  },
 
-    //ADD OBJECT (list item) AND BOOLEAN (Option to complete - see Toggle)
-    addTodo: function (todoText) {
-      this.todos.push({
-        todoText: todoText,
-        completed: false
-      })
-      console.log('My Todos:', this.todos)
-    },
-
-
-    //CHANGE A LIST ITEM
-    changeTodo: function (position, newValue) {
-      this.todos[position] = newValue
-      console.log('My Todos:', this.todos)
-    },
+  //ADD OBJECT (list item) AND BOOLEAN (Option to complete - see Toggle)
+  addTodo: function (todoText) {
+    this.todos.push({
+      todoText: todoText,
+      completed: false
+    })
+    console.log('My Todos:', this.todos)
+  },
 
 
-    //CHANGE OBJECT (See Add Object for reference to todoText)
-    changeTodo: function (position, todoText) {
-      this.todos[position].todoText = todoText
-    },
+  //CHANGE A LIST ITEM
+  changeTodo: function (position, newValue) {
+    this.todos[position] = newValue
+    console.log('My Todos:', this.todos)
+  },
 
-    //TOGGLE LIST ITEM (Item Completed)
-    toggleTodo: function (position) {
-      //Variable is created for reference in the next line 
-      var todo = this.todos[position];
-      //Toggle using ! bang operator
-      todo.completed = !todo.completed;
-      this.displayTodo()
-    },
 
-    //TOGGLE ALL LIST ITEMS 
-    toggleAll: function () {
-      var completedTodos = this.todos.length;
-      var totalTodos = 0;
+  //CHANGE OBJECT (See Add Object for reference to todoText)
+  changeTodo: function (position, todoText) {
+    this.todos[position].todoText = todoText
+  },
 
-      //If everything true, then make everything false
-      if (completedTodos === totalTodos) {
-      //Make everything false
+  //TOGGLE LIST ITEM (Item Completed)
+  toggleTodo: function (position) {
+    //Variable is created for reference in the next line 
+    var todo = this.todos[position];
+    //Toggle using ! bang operator
+    todo.completed = !todo.completed;
+    this.displayTodo()
+  },
 
+  //TOGGLE ALL LIST ITEMS 
+  toggleAll: function () {
+    var completedTodos = this.todos.length;
+    var totalTodos = 0;
+
+    //Get number of completed Todos
+    for (var i = 0; i < totalTodos; i++) {
+      if (this.todos[i].completed === true) {
+        completedTodos++;
       }
-    },
-
-    //DELETE A LIST ITEM
-    deleteTodo: function (position) {
-      this.todos.splice(position)
-      console.log('My Todos:', this.todos)
     }
-  };
+
+    //If everything true, then make everything false
+    if (completedTodos === totalTodos) {
+      //Make everything false
+      for (var i = 0; i < totalTodos; i++) {
+        this.todos[i].completed = false
+      }
+
+    }
+  },
+
+  //DELETE A LIST ITEM
+  deleteTodo: function (position) {
+    this.todos.splice(position)
+    console.log('My Todos:', this.todos)
+  }
+};
 
 //TO EXECUTE METHODS (FUNCTIONS)
 
