@@ -1,6 +1,6 @@
 
 //OBJECT - TODOLIST
-//Create todoList Object.
+//Create todoList Object
 let todoList = {
 
   //POPULATED LIST (Array)
