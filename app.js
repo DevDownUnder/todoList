@@ -71,6 +71,15 @@ let todoList = {
       this.displayTodo()
     },
 
+    //TOGGLE ALL LIST ITEMS 
+    toggleAll: function () {
+      //If everything true, then make everything false
+      if (completedTodos === totalTodos) {
+      //Make everything false
+
+      }
+    },
+
     //DELETE A LIST ITEM
     deleteTodo: function (position) {
       this.todos.splice(position)
