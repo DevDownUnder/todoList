@@ -73,6 +73,9 @@ let todoList = {
 
     //TOGGLE ALL LIST ITEMS 
     toggleAll: function () {
+      var completedTodos = this.todos.length;
+      var totalTodos = 0;
+
       //If everything true, then make everything false
       if (completedTodos === totalTodos) {
       //Make everything false
