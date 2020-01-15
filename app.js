@@ -73,10 +73,11 @@ let todoList = {
 
   //TOGGLE ALL LIST ITEMS 
   toggleAll: function () {
-    var completedTodos = this.todos.length;
-    var totalTodos = 0;
+    //Create variables for all list items (totalTodos) and completed items (completedTodos)
+    var totalTodos = this.todos.length; 
+    var completedTodos = 0;
 
-    //Get number of completed Todos
+    //Get number of completedTodos
     for (var i = 0; i < totalTodos; i++) {
       if (this.todos[i].completed === true) {
         completedTodos++;
@@ -89,9 +90,14 @@ let todoList = {
       for (var i = 0; i < totalTodos; i++) {
         this.todos[i].completed = false
       }
-
     }
-  },
+    else{
+      //Make everything true
+       for (var i = 0; i < totalTodos; i++) {
+        this.todos[i].completed = true
+      }
+    }
+ },
 
   //DELETE A LIST ITEM
   deleteTodo: function (position) {
