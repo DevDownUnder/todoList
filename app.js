@@ -88,6 +88,7 @@ let todoList = {
     if (completedTodos === totalTodos) {
       //Make everything false
       for (var i = 0; i < totalTodos; i++) {
+        //this (todoList object) todos (property) i (number of items in the property) completed  (items marked as completed)
         this.todos[i].completed = false
       }
     }
