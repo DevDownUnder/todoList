@@ -130,6 +130,7 @@ let todoList = {
 
 //BUTTONS
 
+//DISPLAY
 //Create a link to the Display Todos button Element in the HTML (document object)
 var displayTodosButton = document.getElementById('displayTodosButton');
 
@@ -140,4 +141,9 @@ displayTodosButton.addEventListener ('click',function() {
 });
 
 
-//= todoList.displayTodo()
+//TOGGLE ALL
+var toggleAllButton = document.getElementById('toggleAllButton');
+
+toggleAllButton.addEventListener ('click',function() {
+  todoList.toggleAll();
+});
