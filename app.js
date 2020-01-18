@@ -126,3 +126,18 @@ let todoList = {
 
 //DELETE A LIST ITEM 
 //todoList.deleteTodo(item position)
+
+
+//BUTTONS
+
+//Create a link to the Display Todos button Element in the HTML (document object)
+var displayTodosButton = document.getElementById('displayTodosButton');
+
+//Create an Event listener for a mouse click on the Display Todos button
+//Add the displayTodo function in
+displayTodosButton.addEventListener ('click',function() {
+  todoList.displayTodo();
+});
+
+
+//= todoList.displayTodo()
